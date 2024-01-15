@@ -10,12 +10,10 @@ const app = express();
 const port = process.env.PORT || 3100;
 
 // middleware
-app.use(
-    cors({
-        origin: "*",
-        methods: ["GET", "POST", "PUT", "DELETE"],  
-    })
-);
+app.use(cors({
+    methods: ['GET', 'POST'],
+    allowedHeaders: ['*'],
+  }));
 
 app.use(express.json());
 
