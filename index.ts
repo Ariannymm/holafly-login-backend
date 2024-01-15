@@ -9,7 +9,12 @@ dotenv.config();
 const app = express();
 const port = process.env.PORT || 3100;
 
-app.use(cors());
+// middleware
+app.use(
+    cors({
+        origin: "*",
+    })
+);
 app.use(express.json());
 
 app.use('/api/login', loginRouter);
