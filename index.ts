@@ -12,7 +12,7 @@ const port = process.env.PORT || 3100;
 // middleware
 app.use(
     cors({
-        origin: "http://localhost:3000",
+        origin: "*",
     })
 );
 app.use(express.json());
