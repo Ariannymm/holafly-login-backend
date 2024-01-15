@@ -108,9 +108,11 @@
     // "skipDefaultLibCheck": true,                      /* Skip type checking .d.ts files that are included with TypeScript. */
     "skipLibCheck": true,                                 /* Skip type checking all .d.ts files. */
     "baseUrl": "./",
-    "outDir": ".build",
+    "outDir": "dist",
     "allowJs": true
   },
-  "include": ["routes/**/*.js", "routes/**/*.ts"],
+  "include": [
+    "./**/*.ts"
+  ],
   "exclude": ["node_modules"]
 }

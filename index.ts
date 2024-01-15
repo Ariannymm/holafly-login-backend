@@ -1,5 +1,4 @@
 import express from "express";
-import cors from "cors";
 import dotenv from "dotenv";
 import loginRouter from "./routes/login";
 import cardsRouter from "./routes/cards";
@@ -8,12 +7,6 @@ dotenv.config();
 
 const app = express();
 const port = process.env.PORT || 3100;
-
-// middleware
-app.use(cors({
-    methods: ['GET', 'POST'],
-    allowedHeaders: ['*'],
-  }));
 
 app.use(express.json());
 
